@@ -53,8 +53,8 @@ export default function ThemeToggle() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center w-9 h-9 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
-        title={`Current theme: ${currentThemeData.label}`}
-        aria-label={`Theme selector. Current theme: ${currentThemeData.label}`}
+        title={`Current theme: ${currentThemeData?.label || 'System'}`}
+        aria-label={`Theme selector. Current theme: ${currentThemeData?.label || 'System'}`}
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >
