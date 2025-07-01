@@ -89,12 +89,12 @@ export default async function PostPage({ params }: PageProps) {
           )}
         </div>
         
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 text-balance">
           {post.title}
         </h1>
         
         {post.metadata?.surf_location && (
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
             📍 {post.metadata.surf_location}
           </p>
         )}
@@ -120,7 +120,7 @@ export default async function PostPage({ params }: PageProps) {
       {/* Content */}
       {post.metadata?.content && (
         <div 
-          className="prose-surf"
+          className="prose-surf dark:prose-invert"
           dangerouslySetInnerHTML={{
             __html: post.metadata.content
               .replace(/^# /gm, '## ')
@@ -140,7 +140,7 @@ export default async function PostPage({ params }: PageProps) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <div className="mt-16 pt-8 border-t border-gray-200">
+        <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
           <RelatedPosts posts={relatedPosts} />
         </div>
       )}

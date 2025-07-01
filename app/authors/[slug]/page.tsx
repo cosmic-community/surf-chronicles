@@ -79,12 +79,12 @@ export default async function AuthorPage({ params }: PageProps) {
           
           {/* Author Info */}
           <div className="flex-1">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               {displayName}
             </h1>
             
             {author.metadata?.bio && (
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 {author.metadata.bio}
               </p>
             )}
@@ -94,7 +94,7 @@ export default async function AuthorPage({ params }: PageProps) {
               {author.metadata?.years_surfing && (
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🏄‍♂️</span>
-                  <span className="text-gray-600">
+                  <span className="text-gray-600 dark:text-gray-300">
                     {author.metadata.years_surfing} years surfing
                   </span>
                 </div>
@@ -103,7 +103,7 @@ export default async function AuthorPage({ params }: PageProps) {
               {author.metadata?.home_break && (
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">📍</span>
-                  <span className="text-gray-600">
+                  <span className="text-gray-600 dark:text-gray-300">
                     {author.metadata.home_break}
                   </span>
                 </div>
@@ -116,7 +116,7 @@ export default async function AuthorPage({ params }: PageProps) {
                     href={`https://instagram.com/${author.metadata.instagram_handle.replace('@', '')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-500 hover:text-primary-600 transition-colors"
+                    className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 transition-colors"
                   >
                     {author.metadata.instagram_handle}
                   </a>
@@ -129,9 +129,9 @@ export default async function AuthorPage({ params }: PageProps) {
 
       {/* Posts Section */}
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
           Posts by {displayName}
-          <span className="ml-2 text-sm font-normal text-gray-500">
+          <span className="ml-2 text-sm font-normal text-gray-500 dark:text-gray-400">
             ({posts.length})
           </span>
         </h2>
@@ -146,10 +146,10 @@ export default async function AuthorPage({ params }: PageProps) {
           <div className="text-center py-16">
             <div className="max-w-md mx-auto">
               <div className="text-6xl mb-4">✍️</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 No posts yet
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-400">
                 {displayName} hasn't published any posts yet. Check back soon!
               </p>
             </div>

@@ -23,7 +23,7 @@ export default async function HomePage() {
           {/* Main Posts */}
           <div className="flex-1">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">Latest Posts</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Latest Posts</h2>
             </div>
             
             {recentPosts.length > 0 ? (
@@ -34,7 +34,7 @@ export default async function HomePage() {
               </div>
             ) : (
               <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No posts available yet.</p>
+                <p className="text-gray-500 dark:text-gray-400 text-lg">No posts available yet.</p>
               </div>
             )}
           </div>

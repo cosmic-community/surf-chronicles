@@ -8,12 +8,12 @@
   }
   
   body {
-    @apply text-gray-900 bg-white;
+    @apply text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-gray-900;
+    @apply font-bold text-gray-900 dark:text-white;
   }
   
   h1 {
@@ -39,39 +39,43 @@
   }
   
   .btn-primary {
-    @apply btn bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500;
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 dark:bg-primary-600 dark:hover:bg-primary-700;
   }
   
   .btn-secondary {
-    @apply btn bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500;
+    @apply btn bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600;
   }
   
   .card {
     @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden;
   }
   
+  .card-dark {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden transition-colors;
+  }
+  
   .prose-surf {
-    @apply prose prose-lg max-w-none;
+    @apply prose prose-lg max-w-none dark:prose-invert;
   }
   
   .prose-surf h1 {
-    @apply text-gray-900 font-bold text-3xl lg:text-4xl mb-6;
+    @apply text-gray-900 dark:text-white font-bold text-3xl lg:text-4xl mb-6;
   }
   
   .prose-surf h2 {
-    @apply text-gray-900 font-bold text-2xl lg:text-3xl mb-4 mt-8;
+    @apply text-gray-900 dark:text-white font-bold text-2xl lg:text-3xl mb-4 mt-8;
   }
   
   .prose-surf h3 {
-    @apply text-gray-900 font-bold text-xl lg:text-2xl mb-3 mt-6;
+    @apply text-gray-900 dark:text-white font-bold text-xl lg:text-2xl mb-3 mt-6;
   }
   
   .prose-surf p {
-    @apply text-gray-700 leading-relaxed mb-4;
+    @apply text-gray-700 dark:text-gray-300 leading-relaxed mb-4;
   }
   
   .prose-surf ul {
-    @apply text-gray-700 space-y-2 mb-4;
+    @apply text-gray-700 dark:text-gray-300 space-y-2 mb-4;
   }
   
   .prose-surf li {
@@ -79,7 +83,7 @@
   }
   
   .prose-surf strong {
-    @apply text-gray-900 font-semibold;
+    @apply text-gray-900 dark:text-white font-semibold;
   }
 }
 

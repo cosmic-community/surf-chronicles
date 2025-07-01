@@ -23,12 +23,12 @@ export default function AuthorCard({
   }
 
   const textClasses = {
-    default: 'text-gray-900',
+    default: 'text-gray-900 dark:text-white',
     light: 'text-white'
   }
 
   const subTextClasses = {
-    default: 'text-gray-600',
+    default: 'text-gray-600 dark:text-gray-300',
     light: 'text-gray-200'
   }
 
@@ -51,7 +51,7 @@ export default function AuthorCard({
       <div className="flex-1 min-w-0">
         <Link 
           href={`/authors/${author.slug}`}
-          className={`font-medium ${textClasses[variant]} hover:text-primary-500 transition-colors`}
+          className={`font-medium ${textClasses[variant]} hover:text-primary-500 dark:hover:text-primary-400 transition-colors`}
         >
           {displayName}
         </Link>

@@ -12,7 +12,7 @@ export default function PostCard({ post, showAuthor = true }: PostCardProps) {
   const summary = getPostSummary(post, 120)
 
   return (
-    <article className="card group hover:shadow-lg transition-all duration-300">
+    <article className="card-dark group hover:shadow-lg transition-all duration-300">
       {/* Featured Image */}
       {post.metadata?.featured_image && (
         <Link href={`/posts/${post.slug}`} className="block">
@@ -45,7 +45,7 @@ export default function PostCard({ post, showAuthor = true }: PostCardProps) {
         )}
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-500 transition-colors">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors">
           <Link href={`/posts/${post.slug}`}>
             {post.title}
           </Link>
@@ -53,13 +53,13 @@ export default function PostCard({ post, showAuthor = true }: PostCardProps) {
 
         {/* Summary */}
         {summary && (
-          <p className="text-gray-600 mb-4 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
             {summary}
           </p>
         )}
 
         {/* Metadata */}
-        <div className="flex items-center justify-between text-sm text-gray-500">
+        <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
           <div className="flex items-center gap-4">
             {post.metadata?.surf_location && (
               <span className="flex items-center gap-1">
@@ -77,7 +77,7 @@ export default function PostCard({ post, showAuthor = true }: PostCardProps) {
 
         {/* Author */}
         {showAuthor && post.metadata?.author && (
-          <div className="mt-6 pt-4 border-t border-gray-100">
+          <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
             <AuthorCard 
               author={post.metadata.author} 
               showBio={false}

@@ -4,12 +4,14 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
+          400: '#60a5fa',
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
@@ -61,6 +63,17 @@ module.exports = {
             'li': {
               marginBottom: '0.25rem',
             }
+          }
+        },
+        invert: {
+          css: {
+            color: '#d1d5db',
+            'h1, h2, h3, h4': {
+              color: '#ffffff',
+            },
+            strong: {
+              color: '#ffffff',
+            },
           }
         }
       }

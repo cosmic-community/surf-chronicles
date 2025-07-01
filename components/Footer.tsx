@@ -2,7 +2,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-black text-white transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <span className="text-2xl font-bold">🏄‍♂️ Surf Chronicles</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
+            <p className="text-gray-300 dark:text-gray-400 mb-4 max-w-md">
               Your ultimate destination for surf culture, destinations, gear reviews, and techniques. 
               Join our community of passionate surfers exploring the world's best breaks.
             </p>
@@ -21,22 +21,22 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/" className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/categories/destinations" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/categories/destinations" className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors">
                   Destinations
                 </a>
               </li>
               <li>
-                <a href="/categories/gear-reviews" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/categories/gear-reviews" className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors">
                   Gear Reviews
                 </a>
               </li>
               <li>
-                <a href="/categories/techniques" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/categories/techniques" className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors">
                   Techniques
                 </a>
               </li>
@@ -51,7 +51,7 @@ export default function Footer() {
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors text-2xl"
+                className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors text-2xl"
                 aria-label="Instagram"
               >
                 📸
@@ -60,7 +60,7 @@ export default function Footer() {
                 href="https://youtube.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors text-2xl"
+                className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors text-2xl"
                 aria-label="YouTube"
               >
                 📺
@@ -69,7 +69,7 @@ export default function Footer() {
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors text-2xl"
+                className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors text-2xl"
                 aria-label="Twitter"
               >
                 🐦
@@ -79,15 +79,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        <div className="border-t border-gray-800 dark:border-gray-900 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-gray-400 dark:text-gray-500 text-sm">
             © {currentYear} Surf Chronicles. Built with Cosmic CMS.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#" className="text-gray-400 dark:text-gray-500 hover:text-white text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a href="#" className="text-gray-400 dark:text-gray-500 hover:text-white text-sm transition-colors">
               Terms of Service
             </a>
           </div>
