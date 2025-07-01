@@ -1,3 +1,5 @@
+// types.ts
+
 // Base Cosmic object interface
 interface CosmicObject {
   id: string;
@@ -5,6 +7,7 @@ interface CosmicObject {
   title: string;
   content?: string;
   metadata: Record<string, any>;
+  type?: string; // Added type property
   type_slug?: string;
   created_at: string;
   modified_at: string;
@@ -81,15 +84,15 @@ export interface CosmicResponse<T> {
 
 // Type guards for runtime validation
 export function isPost(obj: CosmicObject): obj is Post {
-  return obj.type_slug === 'posts' || obj.type === 'posts';
+  return obj.type === 'posts' || obj.type_slug === 'posts';
 }
 
 export function isAuthor(obj: CosmicObject): obj is Author {
-  return obj.type_slug === 'authors' || obj.type === 'authors';
+  return obj.type === 'authors' || obj.type_slug === 'authors';
 }
 
 export function isCategory(obj: CosmicObject): obj is Category {
-  return obj.type_slug === 'categories' || obj.type === 'categories';
+  return obj.type === 'categories' || obj.type_slug === 'categories';
 }
 
 // Utility function for safe property access

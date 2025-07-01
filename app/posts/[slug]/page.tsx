@@ -129,7 +129,7 @@ export default async function PostPage({ params }: PageProps) {
               .replace(/### (.*?)(<br \/>|$)/g, '<h3>$1</h3>')
               .replace(/## (.*?)(<br \/>|$)/g, '<h2>$1</h2>')
               .replace(/- (.*?)(<br \/>|$)/g, '<li>$1</li>')
-              .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+              .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
               .replace(/<br \/><br \/>/g, '</p><p>')
               .replace(/^(?!<[h|u|l])/gm, '<p>')
               .replace(/(<br \/>)$/gm, '</p>')
