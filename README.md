@@ -1,5 +1,5 @@
 <!-- README_START -->
-# Surf Chronicles
+# LFG Cosmic
 
 A modern surf blog platform showcasing destinations, gear reviews, and techniques. Built with Next.js and powered by Cosmic CMS, featuring beautiful surf photography and expert insights from professional surfers and photographers.
 
