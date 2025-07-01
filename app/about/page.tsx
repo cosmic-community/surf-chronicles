@@ -114,16 +114,17 @@ export default async function AboutPage() {
 
         {/* Contact Section */}
         {metadata.contact_email && (
-          <div className="text-center bg-primary-50 dark:bg-primary-900/20 rounded-2xl p-8 transition-colors">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              📧 Get In Touch
+          <div className="text-center bg-gray-50 dark:bg-gray-800/80 rounded-2xl p-8 transition-colors border dark:border-gray-700">
+            <div className="text-4xl mb-4">📧</div>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Get In Touch
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-gray-600 dark:text-gray-200 mb-6 text-lg">
               Have questions or want to collaborate? We'd love to hear from you!
             </p>
             <a
               href={`mailto:${metadata.contact_email}`}
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Contact Us
             </a>
