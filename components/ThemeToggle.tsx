@@ -16,7 +16,7 @@ export default function ThemeToggle() {
     const themes: Theme[] = ['light', 'dark', 'system']
     const currentTheme = theme || 'system' // Ensure we have a valid theme
     const currentIndex = themes.indexOf(currentTheme)
-    const nextTheme = themes[(currentIndex + 1) % themes.length]
+    const nextTheme = themes[(currentIndex + 1) % themes.length] as Theme
     setTheme(nextTheme)
   }
 
