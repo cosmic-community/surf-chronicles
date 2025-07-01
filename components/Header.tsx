@@ -109,36 +109,38 @@ export default function Header() {
         </div>
 
         {/* Mobile menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-            <Link
-              href="/"
-              onClick={closeMenu}
-              className="text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-            >
-              Home
-            </Link>
-            
-            {categories.map((category) => (
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
               <Link
-                key={category.id}
-                href={`/categories/${category.slug}`}
+                href="/"
+                onClick={closeMenu}
+                className="text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              >
+                Home
+              </Link>
+              
+              {categories.map((category) => (
+                <Link
+                  key={category.id}
+                  href={`/categories/${category.slug}`}
+                  onClick={closeMenu}
+                  className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                >
+                  {category.title}
+                </Link>
+              ))}
+
+              <Link
+                href="/about"
                 onClick={closeMenu}
                 className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors"
               >
-                {category.title}
+                About
               </Link>
-            ))}
-
-            <Link
-              href="/about"
-              onClick={closeMenu}
-              className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-            >
-              About
-            </Link>
+            </div>
           </div>
-        </div>
+        )}
       </nav>
     </header>
   )
