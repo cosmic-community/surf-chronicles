@@ -45,6 +45,23 @@ export interface Category extends CosmicObject {
   };
 }
 
+// About page object type
+export interface About extends CosmicObject {
+  type?: 'about';
+  metadata: {
+    page_title?: string;
+    hero_image?: {
+      url: string;
+      imgix_url: string;
+    };
+    introduction?: string;
+    main_content?: string;
+    mission_statement?: string;
+    values?: string;
+    contact_email?: string;
+  };
+}
+
 // Wave condition and season types
 export type WaveCondition = {
   key: 'small' | 'medium' | 'large' | 'xlarge';
@@ -93,6 +110,10 @@ export function isAuthor(obj: CosmicObject): obj is Author {
 
 export function isCategory(obj: CosmicObject): obj is Category {
   return obj.type === 'categories' || obj.type_slug === 'categories';
+}
+
+export function isAbout(obj: CosmicObject): obj is About {
+  return obj.type === 'about' || obj.type_slug === 'about';
 }
 
 // Utility function for safe property access

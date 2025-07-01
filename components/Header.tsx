@@ -38,6 +38,13 @@ export default async function Header() {
                   {category.title}
                 </Link>
               ))}
+
+              <Link
+                href="/about"
+                className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                About
+              </Link>
             </div>
           </div>
 
@@ -80,6 +87,13 @@ export default async function Header() {
                 {category.title}
               </Link>
             ))}
+
+            <Link
+              href="/about"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 block px-3 py-2 text-base font-medium transition-colors"
+            >
+              About
+            </Link>
           </div>
         </div>
       </nav>
