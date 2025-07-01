@@ -28,7 +28,7 @@ export default function Hero({ post }: HeroProps) {
 
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           {/* Category */}
           {post.metadata?.category && (
             <div className="mb-6">
@@ -37,7 +37,7 @@ export default function Hero({ post }: HeroProps) {
           )}
 
           {/* Title */}
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
             {post.title}
           </h1>
 
