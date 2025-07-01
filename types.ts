@@ -42,6 +42,10 @@ export interface Category extends CosmicObject {
     name?: string;
     description?: string;
     color?: string;
+    hero_image?: {
+      url: string;
+      imgix_url: string;
+    };
   };
 }
 
